@@ -1,10 +1,10 @@
 class Openssh < Formula
   desc "OpenBSD freely-licensed SSH connectivity tools"
   homepage "http://www.openssh.com/"
-  url "http://ftp.openbsd.org/pub/OpenBSD/OpenSSH/portable/openssh-7.0p1.tar.gz"
-  mirror "https://www.mirrorservice.org/pub/OpenBSD/OpenSSH/portable/openssh-7.0p1.tar.gz"
-  version "7.0p1"
-  sha256 "fd5932493a19f4c81153d812ee4e042b49bbd3b759ab3d9344abecc2bc1485e5"
+  url "http://ftp.openbsd.org/pub/OpenBSD/OpenSSH/portable/openssh-7.1p1.tar.gz"
+  mirror "https://www.mirrorservice.org/pub/OpenBSD/OpenSSH/portable/openssh-7.1p1.tar.gz"
+  version "7.1p1"
+  sha256 "fc0a6d2d1d063d5c66dffd952493d0cda256cad204f681de0f84ef85b2ad8428"
 
   # Please don't resubmit the keychain patch option. It will never be accepted.
   # https://github.com/Homebrew/homebrew-dupes/pull/482#issuecomment-118994372
@@ -19,8 +19,8 @@ class Openssh < Formula
 
   if build.with? "keychain-support"
     patch do
-      url "https://trac.macports.org/export/138238/trunk/dports/net/openssh/files/0002-Apple-keychain-integration-other-changes.patch"
-      sha256 "a707f34c9c639ea5963d5040bee0e543cb87e663c0f525933258f4c0e4290acb"
+      url "https://gist.githubusercontent.com/makigumo/0f0e0f86943f62298132/raw/dea0cf714eca3bcb6ea434d63f79d07a8036d0ff/0002-Apple-keychain-integration-other-changes.patch"
+      sha256 "99d191ff338775c49d16678564360473c5bfbeaca8169bb42e248cc3c7a1cabc"
     end
   end
 
