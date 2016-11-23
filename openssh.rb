@@ -1,10 +1,10 @@
 class Openssh < Formula
   desc "OpenBSD freely-licensed SSH connectivity tools"
   homepage "http://www.openssh.com/"
-  url "http://ftp.openbsd.org/pub/OpenBSD/OpenSSH/portable/openssh-7.1p2.tar.gz"
-  mirror "https://www.mirrorservice.org/pub/OpenBSD/OpenSSH/portable/openssh-7.1p2.tar.gz"
-  version "7.1p2"
-  sha256 "dd75f024dcf21e06a0d6421d582690bf987a1f6323e32ad6619392f3bfde6bbd"
+  url "http://ftp.openbsd.org/pub/OpenBSD/OpenSSH/portable/openssh-7.3p1.tar.gz"
+  mirror "https://www.mirrorservice.org/pub/OpenBSD/OpenSSH/portable/openssh-7.3p1.tar.gz"
+  version "7.3p1"
+  sha256 "3ffb989a6dcaa69594c3b550d4855a5a2e1718ccdde7f5e36387b424220fbecc"
 
   # Please don't resubmit the keychain patch option. It will never be accepted.
   # https://github.com/Homebrew/homebrew-dupes/pull/482#issuecomment-118994372
@@ -19,20 +19,30 @@ class Openssh < Formula
 
   if build.with? "keychain-support"
     patch do
-      url "https://gist.githubusercontent.com/makigumo/0f0e0f86943f62298132/raw/dea0cf714eca3bcb6ea434d63f79d07a8036d0ff/0002-Apple-keychain-integration-other-changes.patch"
-      sha256 "99d191ff338775c49d16678564360473c5bfbeaca8169bb42e248cc3c7a1cabc"
+      url "https://trac.macports.org/export/153360/trunk/dports/net/openssh/files/0002-Apple-keychain-integration-other-changes.patch"
+      sha256 "ebc87b44d3cdd9391e1e30c38a957c02f899b7464499abe9c4025b0d707ffb2c"
     end
   end
 
   patch do
-    url "https://gist.githubusercontent.com/jacknagel/e4d68a979dca7f968bdb/raw/f07f00f9d5e4eafcba42cc0be44a47b6e1a8dd2a/sandbox.diff"
-    sha256 "82c287053eed12ce064f0b180eac2ae995a2b97c6cc38ad1bdd7626016204205"
+    url "https://trac.macports.org/export/153360/trunk/dports/net/openssh/files/patch-sshd.c-apple-sandbox-named-external.diff"
+    sha256 "71f663f4f8d0c4aa33f92612e2b40f7749e39fe8fa5c3ce13575fd508e897ac3"
+  end
+
+  patch do
+    url "https://trac.macports.org/export/153360/trunk/dports/net/openssh/files/patch-sandbox-darwin.c-apple-sandbox-named-external.diff"
+    sha256 "215b73f36b9e4082c3e7e45d1b9858421d11c2a666d60e61fc18c915b4e9599b"
+  end
+
+  patch do
+    url "https://trac.macports.org/export/153360/trunk/dports/net/openssh/files/pam.patch"
+    sha256 "e70dd8efdf401ad61ee212329372931e505284d73adb38437dfb746eda08c742"
   end
 
   # Patch for SSH tunnelling issues caused by launchd changes on Yosemite
   patch do
-    url "https://trac.macports.org/export/138238/trunk/dports/net/openssh/files/launchd.patch"
-    sha256 "012ee24bf0265dedd5bfd2745cf8262c3240a6d70edcd555e5b35f99ed070590"
+    url "https://trac.macports.org/export/153360/trunk/dports/net/openssh/files/launchd.patch"
+    sha256 "cc16517fb855ecfd4bd8d91c652418723dc29197715e81ba41d37b49470e9342"
   end
 
   def install
@@ -70,15 +80,15 @@ class Openssh < Formula
     if build.with? "keychain-support" then <<-EOS.undent
         NOTE: replacing system daemons is unsupported. Proceed at your own risk.
         For complete functionality, please modify:
-          /System/Library/LaunchAgents/org.openbsd.ssh-agent.plist
+          /System/Library/LaunchAgents/com.openbsd.ssh-agent.plist
         and change ProgramArguments from
           /usr/bin/ssh-agent
         to
           #{HOMEBREW_PREFIX}/bin/ssh-agent
         You will need to restart or issue the following commands
         for the changes to take effect:
-          launchctl unload /System/Library/LaunchAgents/org.openbsd.ssh-agent.plist
-          launchctl load /System/Library/LaunchAgents/org.openbsd.ssh-agent.plist
+          launchctl unload /System/Library/LaunchAgents/com.openbsd.ssh-agent.plist
+          launchctl load /System/Library/LaunchAgents/com.openbsd.ssh-agent.plist
         Finally, add  these lines somewhere to your ~/.bash_profile:
           eval $(ssh-agent)
           function cleanup {
