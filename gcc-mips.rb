@@ -1,13 +1,12 @@
 class GccMips < Formula
   desc "MIPS GNU compiler collection"
   homepage "https://gcc.gnu.org/"
-
   head "svn://gcc.gnu.org/svn/gcc/trunk"
 
   stable do
-    url "https://ftp.gnu.org/gnu/gcc/gcc-7.2.0/gcc-7.2.0.tar.xz"
-    mirror "https://ftpmirror.gnu.org/gcc/gcc-7.2.0/gcc-7.2.0.tar.xz"
-    sha256 "1cf7adf8ff4b5aa49041c8734bbcf1ad18cc4c94d0029aae0f4e48841088479a"
+      url "https://ftp.gnu.org/gnu/gcc/gcc-7.3.0/gcc-7.3.0.tar.xz"
+      mirror "https://ftpmirror.gnu.org/gcc/gcc-7.3.0/gcc-7.3.0.tar.xz"
+      sha256 "832ca6ae04636adbb430e865a1451adf6979ab44ca1c8374f61fba65645ce15c"
   end
 
   depends_on "gmp"
@@ -15,9 +14,13 @@ class GccMips < Formula
   depends_on "mpfr"
   depends_on "isl"
 
+  # GCC bootstraps itself, so it is OK to have an incompatible C++ stdlib
+  cxxstdlib_check :skip
+
   resource "binutils" do
-    url "https://ftpmirror.gnu.org/binutils/binutils-2.29.tar.gz"
-    sha256 "172e8c89472cf52712fd23a9f14e9bca6182727fb45b0f8f482652a83d5a11b4"
+    url "https://ftp.gnu.org/gnu/binutils/binutils-2.30.tar.gz"
+    mirror "https://ftpmirror.gnu.org/binutils/binutils-2.30.tar.gz"
+    sha256 "8c3850195d1c093d290a716e20ebcaa72eda32abf5e3d8611154b39cff79e9ea"
   end
 
   # Fix for libgccjit.so linkage on Darwin
