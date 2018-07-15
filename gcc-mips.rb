@@ -2,34 +2,22 @@ class GccMips < Formula
   desc "MIPS GNU compiler collection"
   homepage "https://gcc.gnu.org/"
   head "svn://gcc.gnu.org/svn/gcc/trunk"
-
-  stable do
-      url "https://ftp.gnu.org/gnu/gcc/gcc-7.3.0/gcc-7.3.0.tar.xz"
-      mirror "https://ftpmirror.gnu.org/gcc/gcc-7.3.0/gcc-7.3.0.tar.xz"
-      sha256 "832ca6ae04636adbb430e865a1451adf6979ab44ca1c8374f61fba65645ce15c"
-  end
+  url "https://ftp.gnu.org/gnu/gcc/gcc-8.1.0/gcc-8.1.0.tar.xz"
+  mirror "https://ftpmirror.gnu.org/gcc/gcc-8.1.0/gcc-8.1.0.tar.xz"
+  sha256 "1d1866f992626e61349a1ccd0b8d5253816222cdc13390dcfaa74b093aa2b153"
 
   depends_on "gmp"
+  depends_on "isl"
   depends_on "libmpc"
   depends_on "mpfr"
-  depends_on "isl"
 
   # GCC bootstraps itself, so it is OK to have an incompatible C++ stdlib
   cxxstdlib_check :skip
 
   resource "binutils" do
-    url "https://ftp.gnu.org/gnu/binutils/binutils-2.30.tar.gz"
-    mirror "https://ftpmirror.gnu.org/binutils/binutils-2.30.tar.gz"
-    sha256 "8c3850195d1c093d290a716e20ebcaa72eda32abf5e3d8611154b39cff79e9ea"
-  end
-
-  # Fix for libgccjit.so linkage on Darwin
-  # https://gcc.gnu.org/bugzilla/show_bug.cgi?id=64089
-  # https://github.com/Homebrew/homebrew-core/issues/1872#issuecomment-225625332
-  # https://github.com/Homebrew/homebrew-core/issues/1872#issuecomment-225626490
-  patch do
-    url "https://raw.githubusercontent.com/Homebrew/formula-patches/e9e0ee09389a54cc4c8fe1c24ebca3cd765ed0ba/gcc/6.1.0-jit.patch"
-    sha256 "863957f90a934ee8f89707980473769cff47ca0663c3906992da6afb242fb220"
+    url "https://ftp.gnu.org/gnu/binutils/binutils-2.31.tar.gz"
+    mirror "https://ftpmirror.gnu.org/binutils/binutils-2.31.tar.gz"
+    sha256 "5a9de9199f22ca7f35eac378f93c45ead636994fc59f3ac08f6b3569f73fcf6f"
   end
 
   def target_archs
