@@ -1,8 +1,8 @@
 cask 'bambootracker' do
-  version '0.3.0'
-  sha256 'c4a7ded7405443b940ab6fcbfaa0b75395b5efde469545ea46b53b6573ef1eb8'
+  version '0.3.5'
+  sha256 '61e3fcd3265942840f8e3feded68d7d76cec32bafba8e055deda84ea2d8fb4d0'
 
-  url "https://github.com/rerrahkr/BambooTracker/releases/download/v0.3.0/BambooTracker-v0.3.0-mac.zip"
+  url "https://github.com/rerrahkr/BambooTracker/releases/download/v0.3.5/BambooTracker-v0.3.5-macOS.zip"
   name 'BambooTracker'
   homepage 'https://github.com/rerrahkr/BambooTracker'
 
