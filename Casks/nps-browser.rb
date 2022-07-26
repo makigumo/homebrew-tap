@@ -1,10 +1,10 @@
-cask 'nps-browser' do
-  version '1.4.5'
-  sha256 'df24e67c19a583a7b3fcb01224537fd8cb812475f7430c3b7a1617fe8e371985'
+cask "nps-browser" do
+  version "1.4.6"
+  sha256 "d4f12f178e1147070fac36a288e53a53a9ae47e89530041e54e559b20efda620"
 
-  url "https://github.com/JK3Y/NPS-Browser-macOS/releases/download/v#{version}/NPSBrowser.v#{version}.dmg"
-  name 'NPS Browser'
-  homepage 'https://github.com/JK3Y/NPS-Browser-macOS'
+  url "https://github.com/JK3Y/NPS-Browser-macOS/releases/download/v#{version}/NPSBrowser.dmg"
+  name "NPS Browser"
+  homepage "https://github.com/JK3Y/NPS-Browser-macOS"
 
-  app 'NPS Browser.app'
+  app "NPS Browser.app"
 end
