@@ -1,9 +1,8 @@
 class Hactool < Formula
   desc "hactool is a tool to view information about, decrypt, and extract common file formats for the Nintendo Switch, especially Nintendo Content Archives."
   homepage "https://github.com/SciresM/hactool"
-  version "1.3.2-r1"
-  url "https://github.com/SciresM/hactool/archive/1.3.2-r1.tar.gz"
-  sha256 "006d692420f722833767948831f41ae41d322b516c808653e6aabad2e8d7046d"
+  url "https://github.com/SciresM/hactool/archive/1.4.0.tar.gz"
+  sha256 "1373c98ef8c58da42cb1e81b361283955caad0e1b8b5ad389b0ee49b7a21da43"
 
   def install
     (buildpath/"config.mk").write <<~EOS
