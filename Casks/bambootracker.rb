@@ -4,6 +4,7 @@ cask "bambootracker" do
 
   url "https://github.com/rerrahkr/BambooTracker/releases/download/v#{version}/BambooTracker-v#{version}-macOS-64bit.zip"
   name "BambooTracker"
+  desc "YM2608 music tracker"
   homepage "https://github.com/rerrahkr/BambooTracker"
 
   app "BambooTracker.app"
