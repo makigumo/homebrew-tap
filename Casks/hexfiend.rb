@@ -8,7 +8,7 @@ cask "hexfiend" do
   desc "Fast and clever hex editor"
   homepage "https://ridiculousfish.com/hexfiend/"
 
-  app "HexFiend.app"
+  app "Hex Fiend.app"
 
   zap trash: [
     "~/Library/Application Support/com.ridiculousfish.HexFiend",
