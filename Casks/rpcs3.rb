@@ -18,6 +18,8 @@ cask "rpcs3" do
     end
   end
 
+  app "RPCS3.app"
+
   zap trash: [
     "~/Library/Application Support/rpcs3",
     "~/Library/Caches/rpcs3",
