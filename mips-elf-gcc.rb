@@ -1,75 +1,53 @@
-class GccMips < Formula
-  desc "MIPS GNU compiler collection"
-  homepage "https://gcc.gnu.org/"
-  head "svn://gcc.gnu.org/svn/gcc/trunk"
-  url "https://ftp.gnu.org/gnu/gcc/gcc-8.1.0/gcc-8.1.0.tar.xz"
-  mirror "https://ftpmirror.gnu.org/gcc/gcc-8.1.0/gcc-8.1.0.tar.xz"
-  sha256 "1d1866f992626e61349a1ccd0b8d5253816222cdc13390dcfaa74b093aa2b153"
+class MipsElfGcc < Formula
+  desc "GNU compiler collection for mips-elf"
+  homepage "https://gcc.gnu.org"
+  url "https://ftp.gnu.org/gnu/gcc/gcc-12.2.0/gcc-12.2.0.tar.xz"
+  mirror "https://ftpmirror.gnu.org/gcc/gcc-12.2.0/gcc-12.2.0.tar.xz"
+  sha256 "e549cf9cf3594a00e27b6589d4322d70e0720cdd213f39beb4181e06926230ff"
+  license "GPL-3.0-or-later" => { with: "GCC-exception-3.1" }
+
+  livecheck do
+    formula "gcc"
+  end
 
   depends_on "gmp"
-  depends_on "isl"
   depends_on "libmpc"
+  depends_on "mips-elf-binutils"
   depends_on "mpfr"
 
-  # GCC bootstraps itself, so it is OK to have an incompatible C++ stdlib
-  cxxstdlib_check :skip
-
-  resource "binutils" do
-    url "https://ftp.gnu.org/gnu/binutils/binutils-2.31.tar.gz"
-    mirror "https://ftpmirror.gnu.org/binutils/binutils-2.31.tar.gz"
-    sha256 "5a9de9199f22ca7f35eac378f93c45ead636994fc59f3ac08f6b3569f73fcf6f"
-  end
-
-  def target_archs
-    ["mips"].freeze
-  end
-
   def install
-    target_archs.each do |arch|
-      target = "#{arch}-elf"
+    target = "mips-elf"
+    mkdir "mips-elf-gcc-build" do
+      system "../configure", "--target=#{target}",
+                             "--prefix=#{prefix}",
+                             "--infodir=#{info}/#{target}",
+                             "--disable-nls",
+                             "--without-isl",
+                             "--without-headers",
+                             "--with-as=#{Formula["mips-elf-binutils"].bin}/mips-elf-as",
+                             "--with-ld=#{Formula["mips-elf-binutils"].bin}/mips-elf-ld",
+                             "--enable-languages=c,c++"
+      system "make", "all-gcc"
+      system "make", "install-gcc"
+      # system "make", "all-target-libgcc"
+      # system "make", "install-target-libgcc"
 
-      resource("binutils").stage do
-        args = %W[
-          --target=#{target}
-          --prefix=#{prefix}/binutils-#{arch}
-          --enable-targets=#{target}
-          --disable-multilib
-          --disable-nls
-        ]
-        mkdir "build-#{arch}" do
-          system "../configure", *args
-          system "make"
-          system "make", "install"
-        end
-      end
-
-      # Put the newly built binutils into our PATH
-      ENV.prepend_path "PATH", "#{prefix}/binutils-#{arch}/bin"
-
-      # Build the GCC compiler
-      args = %W[
-        --target=#{target}
-        --prefix=#{prefix}
-        --enable-languages=c,c++
-        --with-ld=#{prefix}/binutils-#{arch}/bin/#{target}-ld
-        --with-as=#{prefix}/binutils-#{arch}/bin/#{target}-as
-        --with-gmp=#{Formula["gmp"].opt_prefix}
-        --with-mpfr=#{Formula["mpfr"].opt_prefix}
-        --with-mpc=#{Formula["libmpc"].opt_prefix}
-        --with-isl=#{Formula["isl"].opt_prefix}
-        --disable-multilib
-        --disable-nls
-      ]
-
-      mkdir "build-gcc-#{arch}" do
-        system "../configure", *args
-        system "make", "all-gcc"
-        system "make", "install-gcc"
-#        system "make"
-#        system "make", "install"
-      end
-
-      Dir["#{prefix}/binutils-#{arch}/bin/*"].each { |f| ln_s f, bin }
+      # FSF-related man pages may conflict with native gcc
+      (share/"man/man7").rmtree
     end
+  end
+
+  test do
+    (testpath/"test-c.c").write <<~EOS
+      int main(void)
+      {
+        int i=0;
+        while(i<10) i++;
+        return i;
+      }
+    EOS
+    system "#{bin}/mips-elf-gcc", "-c", "-o", "test-c.o", "test-c.c"
+    assert_match "file format elf32-bigmips",
+                 shell_output("#{Formula["mips-elf-binutils"].bin}/mips-elf-objdump -a test-c.o")
   end
 end
