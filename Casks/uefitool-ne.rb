@@ -8,9 +8,10 @@ cask "uefitool-ne" do
   homepage "https://github.com/LongSoft/UEFITool"
 
   livecheck do
-    url "https://github.com/LongSoft/UEFITool"
-    strategy :github_latest do |page|
-      match = page.match(%r{href=.*?/download/(.?\d+(?:\.\d+)*)/UEFITool_NE_\1_mac\.zip}i)
+    url :url
+    regex(%r{/LongSoft/UEFITool/releases/tag/(.\d+)}i)
+    strategy :github_latest do |page, regex|
+      match = page.match(regex)
       next if match.blank?
 
       (match[1]).to_s
