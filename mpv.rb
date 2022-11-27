@@ -60,7 +60,7 @@ class Mpv < Formula
     system "meson", "compile", "-C", "build", "--verbose"
     system "meson", "install", "-C", "build"
 
-    zsh_completion.install "etc/_mpv.zsh"
+    zsh_completion.install "etc/_mpv.zsh" => "_mpv"
   end
 
   test do
