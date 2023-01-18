@@ -1,6 +1,6 @@
 cask "virtualbox-extension-pack" do
-  version "7.0.4"
-  sha256 "bf22f698075685e1d71845d76c3b393b45d72e4b0206d7d434338a99d610e14c"
+  version "7.0.6"
+  sha256 "21c3595361bb2365efe6139f1da724d362daa63fb92c38f686a01aa9200628b2"
 
   url "https://download.virtualbox.org/virtualbox/#{version}/Oracle_VM_VirtualBox_Extension_Pack-#{version}.vbox-extpack"
   name "Oracle VirtualBox Extension Pack"
@@ -43,4 +43,3 @@ cask "virtualbox-extension-pack" do
     license "https://www.virtualbox.org/wiki/VirtualBox_PUEL"
   end
 end
-
