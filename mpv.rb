@@ -32,7 +32,7 @@ class Mpv < Formula
 
   patch do
     url "https://patch-diff.githubusercontent.com/raw/mpv-player/mpv/pull/9885.patch"
-    sha256 "22359f4f42264b4dd6500f0d37783e9887903ab436b1b7cd6cff7e8d3a0475b1"
+    sha256 "7360875f4f1c4645c680abda021da3e82ad96af9979f094636b4ed690e3d95c2"
   end
 
   def install
