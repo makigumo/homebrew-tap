@@ -1,6 +1,6 @@
 cask "uefitool-ne" do
-  version "A62"
-  sha256 "415703306c78717752a53606e4473376d4e58cfc7817a72ead83616ae64ea6b9"
+  version "A63"
+  sha256 "194b62b455a5e2da4256c9cc420bb409c6b296d4306bc2179954702267e88e76"
 
   url "https://github.com/LongSoft/UEFITool/releases/download/#{version}/UEFITool_NE_#{version}_mac.zip"
   name "UEFITool NE"
