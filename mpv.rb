@@ -47,13 +47,12 @@ class Mpv < Formula
       -Dhtml-build=enabled
       -Djavascript=enabled
       -Dlibmpv=true
-      -Dlua=enabled
+      -Dlua=luajit
       -Dlibarchive=enabled
       -Duchardet=enabled
-      -Dsysconfdir=#{etc}/mpv
+      -Dsysconfdir=#{pkgetc}
       -Ddatadir=#{pkgshare}
       -Dmandir=#{man}
-      -Dlua=luajit
     ]
 
     system "meson", "setup", "build", *args, *std_meson_args
