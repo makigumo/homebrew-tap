@@ -27,8 +27,6 @@ class Mpv < Formula
     depends_on "alsa-lib"
   end
 
-  fails_with gcc: "5" # ffmpeg is compiled with GCC
-
   patch do
     url "https://patch-diff.githubusercontent.com/raw/mpv-player/mpv/pull/9885.patch"
     sha256 "7360875f4f1c4645c680abda021da3e82ad96af9979f094636b4ed690e3d95c2"
