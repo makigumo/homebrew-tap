@@ -1,6 +1,6 @@
 cask "bambootracker" do
-  version "0.6.0"
-  sha256 "94c802da5bb917c5c9fd44abb154887a0fdbe67257f7ba8a3e0d4c95ec75bc81"
+  version "0.6.1"
+  sha256 "d949459540ef082308f8be7d4a0e024ad1dc9791e80a9615dc368ffde9643f38"
 
   url "https://github.com/rerrahkr/BambooTracker/releases/download/v#{version}/BambooTracker-v#{version}-macOS-64bit.zip"
   name "BambooTracker"
