@@ -1,8 +1,8 @@
 cask "uefitool-ne" do
-  version "A63"
-  sha256 "194b62b455a5e2da4256c9cc420bb409c6b296d4306bc2179954702267e88e76"
+  version "A65"
+  sha256 "adf9a8452531504949ebc3eb45746083f0d1fb782326d8172cf7b92451a13f9f"
 
-  url "https://github.com/LongSoft/UEFITool/releases/download/#{version}/UEFITool_NE_#{version}_mac.zip"
+  url "https://github.com/LongSoft/UEFITool/releases/download/#{version}/UEFITool_NE_#{version}_universal_mac.zip"
   name "UEFITool NE"
   desc "UEFI firmware image viewer and editor"
   homepage "https://github.com/LongSoft/UEFITool"
