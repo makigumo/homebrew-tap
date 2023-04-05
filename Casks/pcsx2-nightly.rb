@@ -1,9 +1,9 @@
 cask "pcsx2-nightly" do
-  version "1.7.4331"
-  sha256 "a544371b6d866aabce5621460ad5f413d671b0c9dc9b3afe9d37195608e6d963"
+  version "1.7.4332"
+  sha256 "1825cc66d1b295e55f815acd89b7ae551d4f1e7f789205b0ef5f82ed817fc553"
 
   url "https://github.com/PCSX2/pcsx2/releases/download/v#{version}/pcsx2-v#{version}-macos-Qt.tar.xz",
-      verified: "github.com/PCSX2/pcsx2"
+      verified: "github.com/PCSX2/pcsx2/"
   name "pcsx2-nightly"
   desc "Playstation 2 Emulator"
   homepage "https://pcsx2.net/"
