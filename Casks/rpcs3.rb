@@ -1,9 +1,9 @@
 cask "rpcs3" do
-  version "0.0.27-14840,842edbcbe795941981993c667c2d8a866126b5b0,842edbcb"
-  sha256 "2474a957b40bbb5e2820d89e51a41fd5f2d07ac29517018e16c009319073ab08"
+  version "0.0.27-14843,8a509afc206d9b1babae95c9de704944cfaf04d7,8a509afc"
+  sha256 "b2d8146764a2f13bcb2c5267f117407a4f147287f2e77f8e9c54d5f5a6b69a5a"
 
   url "https://github.com/RPCS3/rpcs3-binaries-mac/releases/download/build-#{version.csv.second}/rpcs3-v#{version.csv.first}-#{version.csv.third}_macos.dmg",
-      verified: "github.com/RPCS3/rpcs3-binaries-mac"
+      verified: "github.com/RPCS3/rpcs3-binaries-mac/"
   name "RPCS3"
   desc "PlayStation 3 emulator and debugger"
   homepage "https://rpcs3.net/"
