@@ -9,6 +9,7 @@ cask "hexfiend" do
   homepage "https://ridiculousfish.com/hexfiend/"
 
   app "Hex Fiend.app"
+  binary "#{appdir}/Hex Fiend.app/Contents/Resources/hexf"
 
   zap trash: [
     "~/Library/Application Support/com.ridiculousfish.HexFiend",
