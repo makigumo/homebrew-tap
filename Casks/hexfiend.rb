@@ -1,9 +1,9 @@
 cask "hexfiend" do
-  version "2.16.0"
-  sha256 "8cee7b6d6e53cae4349a328ab12c03a062e9d9367577e9b5e7d7e5546695acb7"
+  version "2.17.0b1"
+  sha256 "bd3219881a71a030bcd86004266b188284d17aa96e434186d5505288a840f4b9"
 
-  url "https://github.com/HexFiend/HexFiend/releases/download/v#{version}/Hex_Fiend_#{version.major}.#{version.minor}.dmg",
-      verified: "github.com/HexFiend/HexFiend"
+  url "https://github.com/HexFiend/HexFiend/releases/download/v#{version}/Hex_Fiend_#{version.major}.#{version.minor}.dmg.zip",
+      verified: "github.com/HexFiend/HexFiend/"
   name "HexFiend"
   desc "Fast and clever hex editor"
   homepage "https://ridiculousfish.com/hexfiend/"
