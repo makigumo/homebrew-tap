@@ -31,12 +31,15 @@ cask "virtualbox-extension-pack" do
   uninstall_postflight do
     next unless File.exist?("/usr/local/bin/VBoxManage")
 
-    system_command "/usr/local/bin/VBoxManage",
+    begin
+      system_command "/usr/local/bin/VBoxManage",
                    args: [
                      "extpack", "uninstall",
                      "Oracle VM VirtualBox Extension Pack"
                    ],
                    sudo: true
+    rescue
+    end
   end
 
   caveats do
