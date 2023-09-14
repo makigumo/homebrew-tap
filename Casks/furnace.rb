@@ -1,9 +1,9 @@
 cask "furnace" do
   arch arm: "arm64", intel: "Intel"
 
-  version "0.6pre9"
-  sha256 arm:   "5bf21eda55e4c96595b7a93f8936df0f06d15e284a4435fccad8f87e1298580a",
-         intel: "1945dd99f9a3416e7cd6ce1d72d9f8b549f3e5801a38a534e76522f6dd696a3b"
+  version "0.6pre11"
+  sha256 arm:   "36724e3ae9d3b683070d8105343955ea085974fab83048337f2f12a880051467",
+         intel: "0aee88150998d114fc9cb77a5071a51e85760e49f53d033db66b1032a3bf57a7"
 
   url "https://github.com/tildearrow/furnace/releases/download/v#{version}/furnace-#{version}-mac-#{arch}.dmg"
   name "furnace"
