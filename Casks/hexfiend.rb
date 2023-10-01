@@ -1,8 +1,8 @@
 cask "hexfiend" do
-  version "2.17.0b1"
-  sha256 "bd3219881a71a030bcd86004266b188284d17aa96e434186d5505288a840f4b9"
+  version "2.17.0b2"
+  sha256 "b74f03b4d2706a4cebe26fc44b946bf3166e7dbeae433f75f46156191c309171"
 
-  url "https://github.com/HexFiend/HexFiend/releases/download/v#{version}/Hex_Fiend_#{version.major}.#{version.minor}.dmg.zip",
+  url "https://github.com/HexFiend/HexFiend/releases/download/#{version}/Hex_Fiend_#{version.major}.#{version.minor}.dmg",
       verified: "github.com/HexFiend/HexFiend/"
   name "HexFiend"
   desc "Fast and clever hex editor"
