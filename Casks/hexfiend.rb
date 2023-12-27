@@ -1,6 +1,6 @@
 cask "hexfiend" do
-  version "2.18.0b1"
-  sha256 "e49bd20f85fff117808e5f84f63e5e775a4c0d308375825c78c1184963696a5a"
+  version "2.18.0b2"
+  sha256 "ba7fd4766dfb98fd2293fc8e6933054871a7a83dbb3fc39a0fa4a016564f776b"
 
   url "https://github.com/HexFiend/HexFiend/releases/download/v#{version}/Hex_Fiend_#{version.major}.#{version.minor}.dmg",
       verified: "github.com/HexFiend/HexFiend/"
