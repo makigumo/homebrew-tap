@@ -1,6 +1,6 @@
 cask "pcsx2-nightly" do
-  version "1.7.5384"
-  sha256 "bc32c6b3c5b931c7c3031111aae648985a4ffeb722500854d253d57faa82fb71"
+  version "1.7.5385"
+  sha256 "9b0bab3f5899b1dff495e44e89260f4347be90f5d403fbb2e6052c7c58809cec"
 
   url "https://github.com/PCSX2/pcsx2/releases/download/v#{version}/pcsx2-v#{version}-macos-Qt.tar.xz",
       verified: "github.com/PCSX2/pcsx2/"
