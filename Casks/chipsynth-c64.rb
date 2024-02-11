@@ -16,12 +16,18 @@ cask "chipsynth-c64" do
 
   pkg "MAC_chipsynth_C64_v#{version}.pkg"
 
-  uninstall pkgutil: []
+  uninstall pkgutil: [
+    "com.plogue.chipsynth.C64.CLAP.pkg",
+    "com.plogue.chipsynth.C64.plugins.pkg",
+    "com.plogue.chipsynth.C64.SA.pkg",
+    "com.plogue.chipsynth.C64.VST3.pkg",
+    "com.Plogue.FermataMainpck",
+  ]
 
   zap trash: [
+    "/Library/Preferences/com.native-instruments.Plogue-chipsynth C64.plist",
     "/Library/Preferences/com.Plogue Art et Technologie, Inc.chipsynth C64.plist",
     "/Library/Preferences/com.Plogue Art et Technologie, Inc.chipsynth C64SA.plist",
-    "/Library/Preferences/com.native-instruments.Plogue-chipsynth C64.plist",
     "~/Library/Preferences/com.Plogue Art et Technologie, Inc.chipsynth C64.plist",
     "~/Library/Preferences/com.Plogue Art et Technologie, Inc.chipsynth C64SA.plist",
     "~/Library/Preferences/com.plogue.chipsynth C64.plist",
