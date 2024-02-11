@@ -1,9 +1,9 @@
 class IntelPcm < Formula
-  desc "Intel® Performance Counter Monitor"
+  desc "Intel Performance Counter Monitor"
   homepage "https://github.com/intel/pcm"
-  url "https://github.com/intel/pcm/archive/refs/tags/202311.tar.gz"
-  sha256 "393f3d6f39f425683b3a69330e72a9b2c6316ed97fc1e4a01b3d63387365c8bf"
-  license "bsd-3-clause"
+  url "https://github.com/intel/pcm/archive/refs/tags/202401.tar.gz"
+  sha256 "c0edb8dd5eb7b7825ca47c0fc13ef86c5038632268d9645fdc9bd190dcb96f37"
+  license "BSD-3-Clause"
 
   depends_on "cmake" => :build
 
