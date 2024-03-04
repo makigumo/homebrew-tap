@@ -1,8 +1,8 @@
 class RustyPsn < Formula
   desc "Get yourself some updates for those ps3 games, will ya?"
   homepage "https://github.com/RainbowCookie32/rusty-psn"
-  url "https://github.com/RainbowCookie32/rusty-psn/archive/refs/tags/v0.3.6.tar.gz"
-  sha256 "6e82f5dead78f3cc50eb42d8355c104c6c5a0a090d8f795644333a409b618870"
+  url "https://github.com/RainbowCookie32/rusty-psn/archive/refs/tags/v0.3.7.tar.gz"
+  sha256 "1234b64848eddb024566042770ff571c4e8dbfc1de5180317d9cbcf114c1be6f"
   license "MIT"
 
   depends_on "rust" => :build
