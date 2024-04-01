@@ -1,6 +1,6 @@
 cask "rpcs3" do
-  version "0.0.31-16276,e90b39932912cdc825f2a7e1ec5e29a6ba251704,e90b3993"
-  sha256 "0122cc1acb4afa2429b8190f3c80f86e1a8873bb3db39f66e370d9f5b53f9b0a"
+  version "0.0.31-16277,597a9f6dd6c3a8b97547809cbd45d90261f688d6,597a9f6d"
+  sha256 "75a9b00107a3e90441b996f64d4198beb945ba27e03ffbcdaf25f4e177e31768"
 
   url "https://github.com/RPCS3/rpcs3-binaries-mac/releases/download/build-#{version.csv.second}/rpcs3-v#{version.csv.first}-#{version.csv.third}_macos.7z",
       verified: "github.com/RPCS3/rpcs3-binaries-mac/"
