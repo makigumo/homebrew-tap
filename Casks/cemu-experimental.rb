@@ -1,6 +1,6 @@
 cask "cemu-experimental" do
-  version "2.0-86"
-  sha256 "dbb589dab76dca85e15064769c05c524daa11089aabd350079fd99517dd56516"
+  version "2.0-87"
+  sha256 "042900f19fb6830f3e7def5f12c7376302c8da976cbc0bd9c078708483828f21"
 
   url "https://github.com/cemu-project/Cemu/releases/download/v#{version}/cemu-#{version}-macos-12-x64.dmg",
       verified: "github.com/cemu-project/Cemu/"
