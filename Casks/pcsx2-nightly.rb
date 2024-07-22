@@ -1,6 +1,6 @@
 cask "pcsx2-nightly" do
-  version "2.1.21"
-  sha256 "6dca51d4fe6127570ae9e5db0827cd959f7b2148ba8f4c86fb2a77b6d4675cfb"
+  version "2.1.22"
+  sha256 "2bc84d7f73ea93d31e423776989b7971970cca9708e78a62e838b004d9add410"
 
   url "https://github.com/PCSX2/pcsx2/releases/download/v#{version}/pcsx2-v#{version}-macos-Qt.tar.xz",
       verified: "github.com/PCSX2/pcsx2/"
@@ -8,7 +8,7 @@ cask "pcsx2-nightly" do
   desc "Playstation 2 Emulator"
   homepage "https://pcsx2.net/"
 
-  app "PCSX2.app"
+  app "PCSX2-v#{version}.app"
 
   zap trash: [
     "~/Library/Application Support/PCSX2",
