@@ -1,8 +1,8 @@
 cask "virtualbox-extension-pack" do
-  version "7.0.20"
-  sha256 "d750fb17688d70e0cb2d7b06f1ad3a661303793f4d1ac39cfa9a54806b89da25"
+  version "7.1.0"
+  sha256 "14f384053368ce5e806a808a07e66a38c6cbb141033e21de4768e670ff0df3ce"
 
-  url "https://download.virtualbox.org/virtualbox/#{version}/Oracle_VM_VirtualBox_Extension_Pack-#{version}.vbox-extpack"
+  url "https://download.virtualbox.org/virtualbox/#{version}/Oracle_VirtualBox_Extension_Pack-#{version}.vbox-extpack"
   name "Oracle VirtualBox Extension Pack"
   desc "Extend the functionality of VirtualBox"
   homepage "https://www.virtualbox.org/"
@@ -22,7 +22,7 @@ cask "virtualbox-extension-pack" do
     system_command "/usr/local/bin/VBoxManage",
                    args:  [
                      "extpack", "install",
-                     "--replace", "#{staged_path}/Oracle_VM_VirtualBox_Extension_Pack-#{version}.vbox-extpack"
+                     "--replace", "#{staged_path}/Oracle_VirtualBox_Extension_Pack-#{version}.vbox-extpack"
                    ],
                    input: "y",
                    sudo:  true
@@ -35,7 +35,7 @@ cask "virtualbox-extension-pack" do
       system_command "/usr/local/bin/VBoxManage",
                      args: [
                        "extpack", "uninstall",
-                       "Oracle VM VirtualBox Extension Pack"
+                       "Oracle VirtualBox Extension Pack"
                      ],
                      sudo: true
     rescue
