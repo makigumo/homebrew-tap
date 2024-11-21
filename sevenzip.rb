@@ -1,9 +1,9 @@
 class Sevenzip < Formula
   desc "7-Zip is a file archiver with a high compression ratio"
   homepage "https://7-zip.org"
-  url "https://7-zip.org/a/7z2405-src.tar.xz"
-  version "24.05"
-  sha256 "63f341cf80b8d287c6e945519b3da0fa75553c85572a471b7fa6e68f9a90b790"
+  url "https://7-zip.org/a/7z2408-src.tar.xz"
+  version "24.08"
+  sha256 "aa04aac906a04df59e7301f4c69e9f48808e6c8ecae4eb697703a47bfb0ac042"
   license all_of: ["LGPL-2.1-or-later", "BSD-3-Clause"]
 
   livecheck do
