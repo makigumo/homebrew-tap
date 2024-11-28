@@ -1,4 +1,4 @@
 {
-	"pcsx2-nightly": "all",
+	"pcsx2@nightly": "all",
 	"cemu-experimental": "all"
 }
