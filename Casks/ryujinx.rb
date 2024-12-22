@@ -1,13 +1,13 @@
 cask "ryujinx" do
-  version "1.2.76"
-  sha256 "6a90927a6da1bdacd78c86564003513b0873955a9ee6873cb039a3ea95bdb1c6"
+  version "1.2.78"
+  sha256 "7ede71b85925a8db38a27767d997d2d62a0a057b43d05e172b951ae439d8bb47"
 
   url "https://github.com/GreemDev/Ryujinx/releases/download/#{version}/ryujinx-#{version}-macos_universal.app.tar.gz"
   name "Ryujinx"
   desc "Experimental Nintendo Switch Emulator written in C#"
   homepage "https://github.com/GreemDev/Ryujinx"
 
-  app "Ryujinx.app"
+  app "Ryujinx.app", target: "Ryujinx GreemDev.app"
 
   zap trash: [
     "~/Library/Preferences/Ryujinx.plist",
