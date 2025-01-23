@@ -1,6 +1,6 @@
 cask "ryujinx" do
-  version "1.2.78"
-  sha256 "7ede71b85925a8db38a27767d997d2d62a0a057b43d05e172b951ae439d8bb47"
+  version "1.2.81"
+  sha256 "ad444ebe3cd03ee1cda30723f7f8d16e4319f6c2374e9d2f9ad8f19adf04a724"
 
   url "https://github.com/GreemDev/Ryujinx/releases/download/#{version}/ryujinx-#{version}-macos_universal.app.tar.gz"
   name "Ryujinx"
