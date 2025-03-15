@@ -1,11 +1,12 @@
 cask "ryujinx@canary" do
-  version "1.3.4"
-  sha256 "2783a68008ad4e244310cffcdeaf367318f70769254f51ba6b038bd906054285"
+  version "1.3.5"
+  sha256 "c6efc2224a5aff4e6cd9151353312033785a3e6f89545e0d008d3ff2376c33eb"
 
-  url "https://github.com/GreemDev/Ryujinx-Canary/releases/download/#{version}/ryujinx-canary-#{version}-macos_universal.app.tar.gz"
+  url "https://github.com/GreemDev/Ryujinx-Canary/releases/download/#{version}/ryujinx-canary-#{version}-macos_universal.app.tar.gz",
+      verified: "github.com/GreemDev/Ryujinx-Canary/"
   name "Ryujinx"
   desc "Experimental Nintendo Switch Emulator written in C#"
-  homepage "https://github.com/GreemDev/Ryujinx"
+  homepage "https://ryujinx.app/"
 
   app "Ryujinx.app", target: "Ryujinx Canary.app"
 
