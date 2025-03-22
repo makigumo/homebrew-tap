@@ -1,5 +1,5 @@
 cask "hexfiend" do
-  version "2.18.1b1"
+  version "2.18.1"
   sha256 "837041623a21eaae59b9b6c0bb7f75533938ab96580861ee7e276bb926e0e076"
 
   url "https://github.com/ridiculousfish/HexFiend/releases/download/v#{version}/Hex_Fiend_#{version.major_minor_patch.chomp(".0").sub(/(\d+)b\d+$/, '\1')}.dmg",
