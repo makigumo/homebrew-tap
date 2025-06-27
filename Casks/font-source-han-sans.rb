@@ -1,6 +1,6 @@
 cask "font-source-han-sans" do
-  version "2.004"
-  sha256 "6f59118a9adda5a7fe4e9e6bb538309f7e1d3c5411f9a9d32af32a79501b7e4f"
+  version "2.005"
+  sha256 "820ceae81be187716f9f1f44bb0749e606f36f62e89c133584af5e16e631be4e"
 
   url "https://github.com/adobe-fonts/source-han-sans/raw/#{version}R/SuperOTC/SourceHanSans.ttc.zip"
   name "Source Han Sans"
