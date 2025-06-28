@@ -1,6 +1,6 @@
 cask "jmdict" do
-  version "20250621.15792498519"
-  sha256 "3301e6a1d71631ef8b9702e28cfd31ccd5ae70cc1d582903857871017c967a5b"
+  version "20250628.15940866076"
+  sha256 "7cbc73ac9314bdbce63977277cbda88ad1c1f4f12750cfac2cd08c1765347338"
 
   url "https://github.com/makigumo/jmdict-mac-dic/releases/download/#{version}/JMDict.dmg"
   name "JMDict for Mac"
