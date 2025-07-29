@@ -1,9 +1,9 @@
 cask "xm8mac" do
   arch arm: "AppleSilicon", intel: "x86_64"
 
-  version "1.7.4"
-  sha256 arm:   "a38139971d194c90fb65d19d5a6e18f380b98f22677127c54d7a74512d270ea2",
-         intel: "53c08bcf4571185cacd38a726d542ea815d8860a6711b586da845cd0c207e301"
+  version "1.7.5"
+  sha256 arm:   "c4b11e8b82c09d43b851a0a07269f5faec5c61a406fd724382073040f0806a15",
+         intel: "c7a950e1f5dfc06a360f4a840d37121e966faceec1b55c6c8be2c174c43a2ab7"
 
   url "https://github.com/bubio/xm8mac/releases/download/#{version}/XM8_macOS_#{arch}.dmg"
   name "xm8mac"
