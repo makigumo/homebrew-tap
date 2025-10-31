@@ -1,6 +1,6 @@
 cask "rpcs3" do
-  version "0.0.38-18263,3c401e7b3dee35cffeef464f66ddf1afa93cacc3,3c401e7b"
-  sha256 "ca8005030820033a25fb03ea73b0ed71fba34e68aeb66c361525eebf7ac0c44d"
+  version "0.0.38-18281,ba2518f8627636f5d78ee4eb108bdcf30d7189e6,ba2518f8"
+  sha256 "9c40966166f2ab18db4bdaabfbdbc5f7ae8d57358aedbd02a49b1f54d4ea024c"
 
   url "https://github.com/RPCS3/rpcs3-binaries-mac/releases/download/build-#{version.csv.second}/rpcs3-v#{version.csv.first}-#{version.csv.third}_macos.7z",
       verified: "github.com/RPCS3/rpcs3-binaries-mac/"
@@ -17,6 +17,8 @@ cask "rpcs3" do
       end
     end
   end
+
+  depends_on macos: ">= :sonoma"
 
   app "RPCS3.app"
 
