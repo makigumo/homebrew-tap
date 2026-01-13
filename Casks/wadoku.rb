@@ -1,6 +1,6 @@
 cask "wadoku" do
-  version "20250706"
-  sha256 "c10626495ba321fdb249df577ebce84bab2d4938f495979bd64ab050f5ed6462"
+  version "20260104"
+  sha256 "de53e89034134e21be4da255b15535a4155a9ec3c5268c6b02436bf591a9f44f"
 
   url "https://www.wadoku.de/downloads/mac/Wadoku#{version}.dictionary.dmg",
       verified: "wadoku.de/downloads/mac/"
