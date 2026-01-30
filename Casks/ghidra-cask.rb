@@ -1,8 +1,8 @@
 cask "ghidra-cask" do
   # Use `-` instead of the usual `,` in the version, because a `,` causes issues
   # with log4j finding ghidra due to misinterpreting the `,` in the path
-  version "12.0.1-20260114"
-  sha256 "85bd2990945f3a78df4d1e09f1bb1f40ab77be3bac62c6e7678900788c7f0f41"
+  version "12.0.2-20260129"
+  sha256 "cf6e9de0b4d6e4ad2810bb4cd7fda59da726a98a454cd140694782aeaf2580e1"
 
   url "https://github.com/NationalSecurityAgency/ghidra/releases/download/Ghidra_#{version.split("-").first}_build/ghidra_#{version.split("-").first}_PUBLIC_#{version.split("-").second}.zip",
       verified: "github.com/NationalSecurityAgency/ghidra/"
