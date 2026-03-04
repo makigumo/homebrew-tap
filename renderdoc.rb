@@ -1,8 +1,8 @@
 class Renderdoc < Formula
   desc "Stand-alone graphics debugging tool"
   homepage "https://renderdoc.org"
-  url "https://github.com/baldurk/renderdoc/archive/refs/tags/v1.42.tar.gz"
-  sha256 "8bed7034f01c1b2a5dd6fd3ab1d94143d4078684d5c3dc7c976c2c927c02dd5f"
+  url "https://github.com/baldurk/renderdoc/archive/refs/tags/v1.43.tar.gz"
+  sha256 "88b0317bce51930885239da0968dfc89f14f4c4c23592a5edadddac49f25068d"
   license "MIT"
 
   depends_on "autoconf" => :build
