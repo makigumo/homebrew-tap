@@ -1,6 +1,6 @@
 cask "xm8mac" do
-  version "1.7.6"
-  sha256 "6531b44334a135454a8f7ada1dc2be5e8db910263f24cd00f029858b4b342d0c"
+  version "1.7.7"
+  sha256 "126f23c37f277a2af2b7032025b89ccf47ef92b260a75fa23eb00bdc37404ccc"
 
   url "https://github.com/bubio/xm8mac/releases/download/#{version}/XM8_macOS_Universal.dmg"
   name "xm8mac"
