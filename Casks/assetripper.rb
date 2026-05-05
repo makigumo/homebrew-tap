@@ -1,9 +1,9 @@
 cask "assetripper" do
   arch arm: "arm64", intel: "x64"
 
-  version "1.3.12"
-  sha256 arm:   "25d1af8fcaf11130d4f849a01f4a0b3c0e10175626ec78457f09d8fcbaea0801",
-         intel: "b17383a41b9639a679e17716d287ac849f412e8c11210a5bec8c5a55d14a55e6"
+  version "1.3.14"
+  sha256 arm:   "680890b97c58be02075438814b3f41ec2a928ae0be8e94fa24ad51faa81078aa",
+         intel: "9948a69fa9056b98bf6294c0e13814feaafcb77687231473bcc4448b2dcc4f51"
 
   url "https://github.com/AssetRipper/AssetRipper/releases/download/#{version}/AssetRipper_mac_#{arch}.zip"
   name "AssetRipper"
