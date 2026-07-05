@@ -1,6 +1,6 @@
 cask "wadoku" do
-  version "20260104"
-  sha256 "de53e89034134e21be4da255b15535a4155a9ec3c5268c6b02436bf591a9f44f"
+  version "20260705"
+  sha256 "bafcf77779f884190b501fc1622d0183bc57d598911a0ee18c3d68f4e673b6cf"
 
   url "https://www.wadoku.de/downloads/mac/Wadoku#{version}.dictionary.dmg",
       verified: "wadoku.de/downloads/mac/"
@@ -12,6 +12,8 @@ cask "wadoku" do
     url "https://www.wadoku.de/downloads/mac/"
     regex(/Wadoku(\d{8}).dictionary/i)
   end
+
+  depends_on :macos
 
   dictionary "Wadoku.dictionary"
 end
