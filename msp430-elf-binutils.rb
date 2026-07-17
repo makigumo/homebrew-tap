@@ -1,9 +1,9 @@
 class Msp430ElfBinutils < Formula
   desc "GNU Binutils for mips-elf cross development"
   homepage "https://www.gnu.org/software/binutils/"
-  url "https://ftpmirror.gnu.org/gnu/binutils/binutils-2.46.0.tar.xz"
-  mirror "https://ftp.gnu.org/binutils/binutils-2.46.0.tar.xz"
-  sha256 "d75a94f4d73e7a4086f7513e67e439e8fcdcbb726ffe63f4661744e6256b2cf2"
+  url "https://ftpmirror.gnu.org/gnu/binutils/binutils-2.46.1.tar.xz"
+  mirror "https://ftp.gnu.org/binutils/binutils-2.46.1.tar.xz"
+  sha256 "e127a709cba24c76de8936cb7083dd768f28cd37eb010492e2f19b71eb1294e4"
   license "GPL-3.0-or-later"
 
   livecheck do
