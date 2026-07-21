@@ -1,9 +1,9 @@
 class Sevenzip < Formula
   desc "7-Zip is a file archiver with a high compression ratio"
   homepage "https://7-zip.org"
-  url "https://7-zip.org/a/7z2601-src.tar.xz"
-  version "26.01"
-  sha256 "b2389e0e930b2f9a348cf0fe7d9870a46482a8ec044ee0bdf42e2136db31c3d6"
+  url "https://github.com/ip7z/7zip/releases/download/26.02/7z2602-src.tar.xz"
+  mirror "https://7-zip.org/a/7z2602-src.tar.xz"
+  sha256 "cf967c98bca02a4b8b16375f441825a8e141362f14be1969bbec8e1ca0bff9dd"
   license all_of: ["LGPL-2.1-or-later", "BSD-3-Clause"]
   compatibility_version 1
   head "https://github.com/ip7z/7zip.git", branch: "main"
@@ -12,8 +12,6 @@ class Sevenzip < Formula
     url "https://7-zip.org/download.html"
     regex(/>\s*Download\s+7-Zip\s+v?(\d+(?:\.\d+)+)\s+\([^)]+?\)/im)
   end
-
-  no_autobump! because: :incompatible_version_format
 
   def install
     mac_suffix = Hardware::CPU.intel? ? "x64" : Hardware::CPU.arch
