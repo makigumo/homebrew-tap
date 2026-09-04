@@ -1,9 +1,8 @@
 cask "rpcs3" do
-  version "0.0.42-19815,8fd2ae954d80d867fd2d58795848c77d1954574b,8fd2ae95"
-  sha256 "247d6f880d48cad465e9f441d8b953fc59c916fefc80edc6bad9da80ed82268a"
+  version "0.0.42-19927,7be182e33bfa92a22d01bfb1b9c4188eff1165d5,7be182e3"
+  sha256 "c432b80230fba00bdf54adb9ba4b52902a34a2c32d450bbca4e769cdfb6b7fcc"
 
-  url "https://github.com/RPCS3/rpcs3-binaries-mac/releases/download/build-#{version.csv.second}/rpcs3-v#{version.csv.first}-#{version.csv.third}_macos.7z",
-      verified: "github.com/RPCS3/rpcs3-binaries-mac/"
+  url "https://github.com/RPCS3/rpcs3-binaries-mac/releases/download/build-#{version.csv.second}/rpcs3-v#{version.csv.first}-#{version.csv.third}_macos.7z"
   name "RPCS3"
   desc "PlayStation 3 emulator and debugger"
   homepage "https://rpcs3.net/"
@@ -17,8 +16,6 @@ cask "rpcs3" do
       end
     end
   end
-
-  depends_on macos: :sequoia
 
   app "RPCS3.app"
 
