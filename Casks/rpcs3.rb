@@ -1,6 +1,6 @@
 cask "rpcs3" do
-  version "0.0.42-19927,7be182e33bfa92a22d01bfb1b9c4188eff1165d5,7be182e3"
-  sha256 "c432b80230fba00bdf54adb9ba4b52902a34a2c32d450bbca4e769cdfb6b7fcc"
+  version "0.0.42-19958,54014a7de4b2ccec98c9c0cb7dbebec0606c5cd6,54014a7d"
+  sha256 "6290f293bcb979c4ec8370d05e2d67e939836ca7790a06dada276b140e635a0a"
 
   url "https://github.com/RPCS3/rpcs3-binaries-mac/releases/download/build-#{version.csv.second}/rpcs3-v#{version.csv.first}-#{version.csv.third}_macos.7z"
   name "RPCS3"
@@ -16,6 +16,8 @@ cask "rpcs3" do
       end
     end
   end
+
+  depends_on macos: :sequoia
 
   app "RPCS3.app"
 
