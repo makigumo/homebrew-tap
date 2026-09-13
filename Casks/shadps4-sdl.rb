@@ -2,8 +2,7 @@ cask "shadps4-sdl" do
   version "0.18.0"
   sha256 "3543e255e2c9bad792ff77000f251493c9af3b32fef7ce5dab3a40906b403fed"
 
-  url "https://github.com/shadps4-emu/shadPS4/releases/download/v.#{version}/shadps4-macos-sdl-#{version}.zip",
-      verified: "github.com/shadps4-emu/shadPS4/"
+  url "https://github.com/shadps4-emu/shadPS4/releases/download/v.#{version}/shadps4-macos-sdl-#{version}.zip"
   name "shadps4-sdl"
   desc "PS4 emulator"
   homepage "https://shadps4.net/"

@@ -14,7 +14,7 @@ cask "ryujinx@canary" do
     end
   end
 
-  depends_on macos: ">= :monterey"
+  depends_on macos: :monterey
 
   app "Ryujinx.app", target: "Ryujinx Canary.app"
 

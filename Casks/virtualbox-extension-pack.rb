@@ -18,8 +18,8 @@ cask "virtualbox-extension-pack" do
 
   stage_only true
 
-  postflight do
-    system_command "/usr/local/bin/VBoxManage",
+  postflight_steps do
+    run "/usr/local/bin/VBoxManage",
                    args:  [
                      "extpack", "install",
                      "--replace", "#{staged_path}/Oracle_VirtualBox_Extension_Pack-#{version}.vbox-extpack"
@@ -32,7 +32,7 @@ cask "virtualbox-extension-pack" do
     next unless File.exist?("/usr/local/bin/VBoxManage")
 
     begin
-      system_command "/usr/local/bin/VBoxManage",
+      run "/usr/local/bin/VBoxManage",
                      args: [
                        "extpack", "uninstall",
                        "Oracle VirtualBox Extension Pack"
