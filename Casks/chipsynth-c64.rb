@@ -1,6 +1,6 @@
 cask "chipsynth-c64" do
-  version "1.123"
-  sha256 "c36360dc283895d26ca47877df457561774cc619a95c5428fc6fd111dfae7a21"
+  version "1.131"
+  sha256 "32861529d2d044ebcc899a1e4ef939ed52f7b592a0baa0e657109c08222e479c"
 
   url "https://s3.amazonaws.com/chipsynth/MAC_chipsynth_C64_v#{version}.dmg"
   name "chipsynth-c64"
@@ -8,9 +8,9 @@ cask "chipsynth-c64" do
   homepage "https://plogue.com/products/chipsynth-c64.html"
 
   livecheck do
-    url "https://plogue.com/downloads.html"
-    regex(%r{href=.*?/MAC_chipsynth_C64_v(\d+(?:\.\d+)*)\.dmg}i)
-    strategy :page_match
+    url "https://plogue.com/downloads.html",
+        user_agent: :browser
+    regex(%r{href=.*?/MAC_chipsynth_C64_v(\d+(?:\.\d+)+)\.dmg}i)
   end
 
   depends_on :macos
