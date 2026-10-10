@@ -1,9 +1,9 @@
 class RiscvElfBinutils < Formula
   desc "GNU Binutils for mips-elf cross development"
   homepage "https://www.gnu.org/software/binutils/"
-  url "https://ftpmirror.gnu.org/gnu/binutils/binutils-2.46.1.tar.xz"
-  mirror "https://ftp.gnu.org/binutils/binutils-2.46.1.tar.xz"
-  sha256 "e127a709cba24c76de8936cb7083dd768f28cd37eb010492e2f19b71eb1294e4"
+  url "https://ftpmirror.gnu.org/gnu/binutils/binutils-2.47.tar.xz"
+  mirror "https://ftp.gnu.org/binutils/binutils-2.47.tar.xz"
+  sha256 "154ab23b60070e8f27013c22977f1129425d67d1e8acd6e13010e617811e4cff"
   license "GPL-3.0-or-later"
 
   livecheck do
