@@ -1,6 +1,6 @@
 cask "chipsynth-c64" do
-  version "1.131"
-  sha256 "32861529d2d044ebcc899a1e4ef939ed52f7b592a0baa0e657109c08222e479c"
+  version "1.132"
+  sha256 "de7213a50d61412b2ec9862abc2f7accbd383b802175c39c2507ce0db335eec4"
 
   url "https://s3.amazonaws.com/chipsynth/MAC_chipsynth_C64_v#{version}.dmg"
   name "chipsynth-c64"
