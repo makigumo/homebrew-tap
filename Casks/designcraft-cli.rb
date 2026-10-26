@@ -1,6 +1,6 @@
 cask "designcraft-cli" do
-  version "0.12.0"
-  sha256 "3a8ebebf03ded56a5b5128f80ec7859351adad94fd8964fd7991acf648a0cd7c"
+  version "0.13.0"
+  sha256 "ba49dc1699ed98f27ef8e9336a24a011f086f3d1a46c6f069c2791bf796de960"
 
   url "https://github.com/storytold/designcraft/releases/download/v#{version}/designcraft-cli-#{version}-macos-universal.zip"
   name "designcraft-cli"
