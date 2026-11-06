@@ -1,6 +1,6 @@
 cask "vectorcraft-cli" do
-  version "0.21.0"
-  sha256 "1c645c749759654223136f9a4c0c6ea73867e79a3969b17844e3cdabaec07429"
+  version "0.21.1"
+  sha256 "1812e57498785d39485865d8fc7d9f6990f313217a2411c3d303ad17fe6e9181"
 
   url "https://github.com/storytold/vectorcraft/releases/download/v#{version}/vectorcraft-cli-#{version}-macos-universal.zip"
   name "vectorcraft-cli"
