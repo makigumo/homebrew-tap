@@ -1,6 +1,6 @@
 cask "virtualbox-extension-pack" do
-  version "7.1.10"
-  sha256 "e020755711849fa0ee23d3bc47bc90cb0ea595da7dda804499568a0dc2387989"
+  version "7.1.22"
+  sha256 "cd5fb32cac59157dc361c90be68ccef1404831aac48ec8377569620afbc9d207"
 
   url "https://download.virtualbox.org/virtualbox/#{version}/Oracle_VirtualBox_Extension_Pack-#{version}.vbox-extpack"
   name "Oracle VirtualBox Extension Pack"
@@ -22,13 +22,13 @@ cask "virtualbox-extension-pack" do
     run "/usr/local/bin/VBoxManage",
                    args:  [
                      "extpack", "install",
-                     "--replace", "#{staged_path}/Oracle_VirtualBox_Extension_Pack-#{version}.vbox-extpack"
+#                     "--replace", "#{staged_path}/Oracle_VirtualBox_Extension_Pack-#{version}.vbox-extpack"
                    ],
-                   input: "y",
+#                   input: "y",
                    sudo:  true
   end
 
-  uninstall_postflight do
+  uninstall_postflight_steps do
     next unless File.exist?("/usr/local/bin/VBoxManage")
 
     begin
