@@ -1,5 +1,5 @@
 cask "virtualbox-extension-pack" do
-  version "7.1.22"
+  version "7.2.22"
   sha256 "cd5fb32cac59157dc361c90be68ccef1404831aac48ec8377569620afbc9d207"
 
   url "https://download.virtualbox.org/virtualbox/#{version}/Oracle_VirtualBox_Extension_Pack-#{version}.vbox-extpack"
